@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>WhatsApp Client Library for .NET Developer | WhatsApp NET Client</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="WhatsApp Client Library for .NET Developer" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://whatsappnetclient.github.io//" />
+<meta property="og:url" content="https://whatsappnetclient.github.io//" />
+<meta property="og:site_name" content="WhatsApp NET Client" />
+<script type="application/ld+json">
+{"@type":"WebSite","url":"https://whatsappnetclient.github.io//","name":"WhatsApp NET Client","headline":"WhatsApp Client Library for .NET Developer","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/WhatsAppNETClient/WhatsAppNETClient">View on GitHub</a>
+
+          <h1 id="project_title">WhatsApp NET Client</h1>
+          <h2 id="project_tagline"></h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="whatsapp-client-library-for-net-developer">WhatsApp Client Library for .NET Developer</h1>
+
+<h2 id="apa-itu-whatsapp-net-client">Apa itu WhatsApp NET Client?</h2>
+
+<p>WhatsApp NET Client adalah library untuk .NET Developer yang digunakan untuk mengembangkan aplikasi WhatsApp klien berbasis desktop. Library ini dikembangkan di atas teknologi .NET dengan menggunakan bahasa pemrograman C#, sehingga bisa digunakan untuk semua bahasa pemrograman .NET seperti C#, F#, VB.NET dan bahasa .NET lainnya.</p>
+
+<p>Dengan menggunakan library ini Anda bisa dengan mudah membuat aplikasi:</p>
+
+<ul>
+  <li>WhatsApp Blast</li>
+  <li>WhatsApp Bot</li>
+  <li>Dan Aplikasi WhatsApp klien lainnya</li>
+</ul>
+
+<h2 id="fitur">Fitur</h2>
+
+<ul>
+  <li>Mengirim pesan</li>
+  <li>Mengirim banyak pesan (broadcast)</li>
+  <li>Mengirim pesan dengan gambar (bisa untuk pesan tunggal atau broadcast)</li>
+  <li>Mengirim file dokumen (bisa untuk pesan tunggal atau broadcast)</li>
+  <li>Mengirim pesan ke nomor/kontak yang belum terdaftar</li>
+  <li>Listen/subscribe pesan yang masuk, jadi enggak perlu nambah objek timer lagi untuk membaca pesan masuk</li>
+  <li>Auto replay pesan yang masuk</li>
+  <li>Otomatis login (Jadi enggak perlu bolak-balik nyecan QRCode WAnya, cukup sekali aja)</li>
+  <li>Semua method yang ada kecuali method untuk konek ke WA/Chrome browser, dibuat secara async (asynchronous) sehingga tidak memblok UI ketika dijalankan</li>
+  <li>Bisa diintegrasikan dengan semua jenis database</li>
+</ul>
+
+<h2 id="persyaratan-sistem">Persyaratan Sistem</h2>
+
+<ul>
+  <li>.NET Framework 4.0, 4.5 dan .NET versi terbaru</li>
+  <li>Versi minimal Google Chrome harus versi 83.xx (jadi klo belum sama silahkan diupdate dulu)</li>
+</ul>
+
+<h2 id="instalasi">Instalasi</h2>
+
+<ul>
+  <li>Download contoh source code di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClient">https://github.com/WhatsAppNETClient/WhatsAppNETClient</a></li>
+  <li>Copykan file <a href="https://github.com/k4m4r82/WhatsappNETClient/tree/master/libs">chromedriver.exe</a> yang ada di folder <strong>libs</strong> ke folder <strong>bin\Debug</strong> atau <strong>bin\Release</strong></li>
+  <li>Jika folder <strong>bin\Debug</strong> atau <strong>bin\Release</strong> belum ada, silahkan lakukan proses build project terlebih dulu.</li>
+</ul>
+
+<h2 id="downgrade-net-framework-contoh-project">Downgrade .NET Framework Contoh Project</h2>
+
+<p>Secara default contoh project yang saya upload di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClient">https://github.com/WhatsAppNETClient/WhatsAppNETClient</a> menggunakan .NET Framework 4.5.</p>
+
+<p>Bagi Anda yang ingin membuka project tersebut di .NET Framework 4, ikuti langkah-langkah berikut:</p>
+
+<ol>
+  <li>Klik kanan project -&gt; properties
+Aktifkan tab Application, kemudian ganti Target framework menjadi .NET Framework 4</li>
+  <li>Hapus library <em>WebDriver</em> dan <em>WhatsAppNETAPI</em> yang ada di node <em>References</em>, kemudian ganti dengan library <em>WebDriver</em> dan <em>WhatsAppNETAPI</em> yang ada di folder <strong>libs\net40</strong></li>
+  <li>Build ulang project</li>
+  <li>Selesai</li>
+</ol>
+
+<h2 id="info-rilis">Info Rilis</h2>
+
+<h3 id="v110-2020-07-05">v1.1.0 (2020-07-05)</h3>
+
+<ul>
+  <li>Fitur baru:
+    <ul>
+      <li>Penambahan fitur untuk mengirim pesan dengan gambar</li>
+      <li>Penambahan fitur untuk mengirim file dokumen</li>
+    </ul>
+  </li>
+  <li>Improve:
+    <ul>
+      <li>Penambahan dukungan untuk .NET Framework 4.0</li>
+      <li>Fitur subscribe pesan masuk</li>
+    </ul>
+  </li>
+  <li>Perbaikan bug:
+    <ul>
+      <li>Mengirim kontak dengan nomor tidak valid</li>
+      <li>Mengirim pesan multi line pada saat broadcast</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="v105-2020-06-24">v1.0.5 (2020-06-24)</h3>
+
+<ul>
+  <li>Perbaikan bug:
+    <ul>
+      <li>Mengirim pesan multi line</li>
+    </ul>
+  </li>
+  <li>Improve:
+    <ul>
+      <li>Fitur subscribe pesan masuk</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="v100-2020-06-22">v1.0.0 (2020-06-22)</h3>
+
+<ul>
+  <li>Rilis pertama</li>
+  <li>Mengirim pesan</li>
+  <li>Mengirim banyak pesan (broadcast)</li>
+  <li>Listen/subscribe pesan yang masuk, jadi enggak perlu nambah objek timer lagi untuk membaca pesan masuk</li>
+  <li>Auto replay pesan yang masuk</li>
+  <li>Otomatis login (Jadi enggak perlu bolak-balik nyecan QRCode WAnya, cukup sekali aja)</li>
+  <li>Semua method yang ada kecuali method untuk konek ke WA/Chrome browser, dibuat secara async (asynchronous) sehingga tidak memblok UI ketika dijalankan</li>
+  <li>Mendukung semua jenis database</li>
+</ul>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+		
+		<p class="copyright">
+			&copy; 2020 Kamarudin. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/pages-themes/slate/" rel="nofollow">The Slate theme</a>
+			</br>
+			<a href="http://coding4ever.net/" rel="nofollow">Coding4ever's Blog</a> | <a href="mailto:rudi.krsoftware@gmail.com">rudi.krsoftware@gmail.com</a>
+		</p>
+		
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
