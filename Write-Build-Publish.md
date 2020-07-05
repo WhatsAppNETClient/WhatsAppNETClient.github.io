@@ -14,5 +14,5 @@
 # deploy
 > xcopy E:\Blog\WhatsAppNETClient\_site\*.* /y /s /e
 > git add -A
-> git commit -m "Site updated at 2020-07-05 06:07:00 PM"
+> git commit -m "Site updated at 2020-07-05 06:32:00 PM"
 > git push origin master
