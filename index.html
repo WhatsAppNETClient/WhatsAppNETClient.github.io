@@ -63,6 +63,7 @@
   <li>Mengirim file dokumen (bisa untuk pesan tunggal atau broadcast)</li>
   <li>Mengirim pesan ke nomor/kontak yang belum terdaftar</li>
   <li>Listen/subscribe pesan yang masuk, jadi enggak perlu nambah objek timer lagi untuk membaca pesan masuk</li>
+  <li>Listen/subscribe pesan yang dikirim, dengan fitur ini kita bisa mengecek apakah pesan sudah terkirim atau belum.</li>
   <li>Auto replay pesan yang masuk</li>
   <li>Otomatis login (Jadi enggak perlu bolak-balik nyecan QRCode WAnya, cukup sekali aja)</li>
   <li>Semua method yang ada kecuali method untuk konek ke WA/Chrome browser, dibuat secara async (asynchronous) sehingga tidak memblok UI ketika dijalankan</li>
@@ -117,7 +118,24 @@ Aktifkan tab Application, kemudian ganti Target framework menjadi .NET Framework
 
 <p><img src="http://wa-net.coding4ever.net/assets/images/3.png" alt="" /></p>
 
+<p><img src="http://wa-net.coding4ever.net/assets/images/4.png" alt="" /></p>
+
 <h2 id="info-rilis">Info Rilis</h2>
+
+<h3 id="v130-2020-07-17">v1.3.0 (2020-07-17)</h3>
+
+<ul>
+  <li>Fitur baru:
+    <ul>
+      <li>Fitur subscribe pesan yang dikirim, dengan fitur ini kita bisa mengecek apakah pesan sudah terkirim atau belum.</li>
+    </ul>
+  </li>
+  <li>Perbaikan bug:
+    <ul>
+      <li>Mengirim pesan ke kontak yang belum terdaftar di kontak WA, pesan yang terkirim menjadi duplikat. Contoh: Pesan <strong>test</strong>, terkirim menjadi <strong>testtest</strong>.</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="v120-2020-07-13">v1.2.0 (2020-07-13)</h3>
 
