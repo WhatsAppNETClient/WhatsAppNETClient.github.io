@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://wa-net.coding4ever.net/" />
 <meta property="og:site_name" content="WhatsApp NET Client" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"http://wa-net.coding4ever.net/","name":"WhatsApp NET Client","headline":"WhatsApp Client Library for .NET Developer","@context":"https://schema.org"}</script>
+{"@type":"WebSite","headline":"WhatsApp Client Library for .NET Developer","url":"http://wa-net.coding4ever.net/","name":"WhatsApp NET Client","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -26,7 +26,7 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/WhatsAppNETClient/WhatsAppNETClient">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/WhatsAppNETClient/WhatsAppNETClient2">View on GitHub</a>
 
           <h1 id="project_title">WhatsApp NET Client</h1>
           <h2 id="project_tagline"></h2>
@@ -42,9 +42,11 @@
 
 <h2 id="apa-itu-whatsapp-net-client">Apa itu WhatsApp NET Client?</h2>
 
-<p>WhatsApp NET Client adalah library <strong>gratis</strong> untuk .NET Developer yang digunakan untuk mengembangkan aplikasi WhatsApp klien berbasis desktop. Library ini dikembangkan di atas teknologi .NET dengan menggunakan bahasa pemrograman C#, sehingga bisa juga digunakan untuk semua bahasa pemrograman .NET selain C# seperti VB.NET, F#, C++ dan bahasa .NET lainnya.</p>
+<p><a href="http://wa-net.coding4ever.net">WhatsApp NET Client</a> adalah library <strong>gratis</strong> untuk .NET Developer yang digunakan untuk mengembangkan aplikasi WhatsApp klien berbasis desktop. Library ini dikembangkan di atas teknologi .NET dengan menggunakan bahasa pemrograman C#, sehingga bisa juga digunakan untuk semua bahasa pemrograman .NET selain C# seperti VB.NET, F#, C++ dan bahasa .NET lainnya.</p>
 
-<p>Dengan menggunakan library ini Anda bisa dengan mudah membuat aplikasi:</p>
+<p>Dalam pengembangannya WhatsApp NET Client menggunakan <a href="https://github.com/pedroslopez/whatsapp-web.js/">whatsapp-web.js</a> sebagai engine untuk berkomunikasi dengan WhatsApp Web.</p>
+
+<p>Jadi kesimpulannya dengan menggunakan library ini Anda bisa dengan mudah membuat aplikasi-aplikasi yang membutuhkan komunikasi dengan aplikasi WhatsApp Web, seperti:</p>
 
 <ul>
   <li>WhatsApp Blast</li>
@@ -55,84 +57,144 @@
 <h2 id="fitur">Fitur</h2>
 
 <ul>
-  <li>Mode <em>siluman</em> (headless/no window). Dengan mengaktifkan mode <em>siluman</em>, chrome browser akan berjalan di background. Secara <em>performance</em> mode ini tidak disarankan untuk digunakan karena lebih lambat dari pada mode normal.</li>
-  <li>Grab contacts untuk membaca kontak WA sehingga hasilnya bisa Anda simpan ke database</li>
+  <li>Full mode <em>siluman</em> (headless/no window). Anda bisa mengatakan selamat tinggal kepada  chrome/firefox browser yang biasanya muncul untuk menjalankan WhatsApp Web.</li>
+  <li>Grab contacts untuk membaca kontak WA sehingga hasilnya bisa disimpan ke database</li>
+  <li>Grab groups dan members untuk membaca data group berserta anggotanya sehingga hasilnya juga bisa disimpan ke database</li>
   <li>Mengirim pesan</li>
   <li>Mengirim banyak pesan (broadcast)</li>
-  <li>Mengirim pesan dengan gambar (bisa untuk pesan tunggal atau broadcast)</li>
-  <li>Mengirim file dokumen (bisa untuk pesan tunggal atau broadcast)</li>
-  <li>Mengirim pesan ke nomor/kontak yang belum terdaftar</li>
+  <li>Mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen</li>
+  <li>Bisa menyimpan gambar, audio, video, dan semua jenis dokumen dari pesan yang masuk (bisa ditentukan sendiri lokasi penyimpanannya)</li>
+  <li>Archive chat</li>
+  <li>Delete chat</li>
   <li>Listen/subscribe pesan yang masuk, jadi enggak perlu nambah objek timer lagi untuk membaca pesan masuk</li>
-  <li>Listen/subscribe pesan yang dikirim, dengan fitur ini kita bisa mengecek apakah pesan sudah terkirim atau belum.</li>
-  <li>Auto replay pesan yang masuk</li>
-  <li>Otomatis login (Jadi enggak perlu bolak-balik nyecan QRCode WAnya, cukup sekali aja)</li>
-  <li>Semua method yang ada kecuali method untuk konek ke WA/Chrome browser dan Grab contacts, dibuat secara async (asynchronous) sehingga tidak memblok UI ketika dijalankan</li>
+  <li>Listen/subscribe pesan yang dikirim, dengan fitur ini kita bisa mengecek apakah pesan yang dikirim berhasil atau gagal</li>
+  <li>Otomatis menyimpan sesi login (jadi scan qr code WAnya cukup sekali saja)</li>
   <li>Bisa dengan mudah diintegrasikan dengan semua jenis database</li>
 </ul>
 
 <h2 id="persyaratan-sistem">Persyaratan Sistem</h2>
 
 <ul>
-  <li>.NET Framework 4.0, 4.5 dan .NET versi terbaru</li>
-  <li>Versi minimal Google Chrome harus versi 87.xx (jadi klo belum sama silahkan diupdate dulu)</li>
+  <li>Windows 7, 8, 10 dan windows versi terbaru</li>
+  <li>.NET Framework 4.5 dan .NET versi terbaru</li>
+  <li>Node.js versi 13.14.0 (khusus Windows 7)</li>
+  <li>Node.js versi 14.16.x atau versi terbaru (untuk windows 8, 10 atau windows terbaru)</li>
+  <li><a href="https://git-scm.com/downloads">Software git</a> (version control)</li>
 </ul>
 
 <h2 id="instalasi">Instalasi</h2>
 
+<h3 id="1-menginstall-nodejs-versi-13140-windows-7-atau-14xx-untuk-windows-8-10-atau-windows-terbaru">1. Menginstall Node.js versi 13.14.0 (windows 7) atau 14.x.x (untuk windows 8, 10 atau windows terbaru)</h3>
+
+<p>Kenapa harus menginstall Node.js? Karena dalam pengembangannya WhatsApp NET Client ini, saya menggunakan <a href="https://github.com/pedroslopez/whatsapp-web.js/">whatsapp-web.js</a> sebagai engine untuk berkomunikasi dengan WhatsApp Web, sehingga diperlukan Node.js karena <a href="https://github.com/pedroslopez/whatsapp-web.js/">Whatsapp-web.js</a> sendiri dikembangkan di atas platform ini.</p>
+
+<p>Untuk menginstall Node.js sangat mudah sekali, Anda tinggal download file instalasinya di <a href="https://nodejs.org/en/download/">sini</a> dengan memilih versi yang sesuai dengan panduan saya di atas. Setelah itu tinggal lakukan instalasi dan mengikuti petunjuk yang ada.</p>
+
+<h3 id="2-mengclone-repository-whatsappnetapinodejs">2. Mengclone Repository WhatsAppNETAPINodeJs</h3>
+
+<p><a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs">WhatsApp NET API NodeJs</a> adalah program kecil yang saya tulis menggunakan bahasa pemrograman java script yang di dalamnya terdapat module untuk mengakses library <a href="https://github.com/pedroslopez/whatsapp-web.js/">Whatsapp-web.js</a> dan <a href="https://www.npmjs.com/package/node-signalr">node-signalr</a>.</p>
+
 <ul>
-  <li>Download contoh source code di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClient">https://github.com/WhatsAppNETClient/WhatsAppNETClient</a></li>
-  <li>Buka project WhatsAppNETClient, kemudian klik kanan solution <code class="language-plaintext highlighter-rouge">WhatsAppNETAPI</code> -&gt; <code class="language-plaintext highlighter-rouge">Rebuild Solution</code>.</li>
-  <li>Download file <a href="https://chromedriver.chromium.org/downloads">chromedriver.exe</a> yang menyesuaikan dengan versi google chrome Anda, kemudian copykan ke folder <strong>bin\Debug</strong> atau <strong>bin\Release</strong>.</li>
-  <li>Selesai, Anda bisa langsung menjalankan project.</li>
+  <li><a href="https://github.com/pedroslopez/whatsapp-web.js/">Whatsapp-web.js</a> berfungsi untuk berkomunikasi dengan WhatsApp Web.</li>
+  <li><a href="https://www.npmjs.com/package/node-signalr">Node-signalr</a> berfungsi sebagai signalR client yang bertugas untuk berkomunikasi dengan signalR server yang saya tanam di dalam library WhatsApp NET Client.</li>
 </ul>
 
-<h2 id="downgrade-net-framework-contoh-project">Downgrade .NET Framework Contoh Project</h2>
+<p><img src="http://wa-net.coding4ever.net/assets/images/7.png" alt="" /></p>
 
-<p>WhatsApp NET Client tersedia dalam dua versi yaitu:</p>
+<p>Untuk mengclone repository <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs">WhatsApp NET API NodeJs</a> caranya sangat gampang, Anda tinggal mendownload <a href="https://git-scm.com/downloads">software git</a> dan menginstallnya.</p>
 
-<ol>
-  <li>Versi .NET Framework 4.0 untuk Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008 dan Windows 7.</li>
-  <li>Versi .NET Framework 4.5 untuk windows 7 ke atas.</li>
-</ol>
+<p>Setelah itu Anda jalankan <code class="language-plaintext highlighter-rouge">command prompt</code> kemudian masuk ke drive <code class="language-plaintext highlighter-rouge">C</code> atau <code class="language-plaintext highlighter-rouge">D</code>, kemudian ketik perintah berikut:</p>
 
-<p>Secara default contoh <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClient">project</a> cara menggunakan library WhatsApp NET Client ini dibuat menggunakan .NET Framework 4.5.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs.git
+</code></pre></div></div>
+<p>Jangan lupa menekan enter ya hehehe, setelah itu lanjutkan dengan mengetikan perintah <code class="language-plaintext highlighter-rouge">cd WhatsAppNETAPINodeJs</code>, kemudian ketikan perintah terakhir yaitu <code class="language-plaintext highlighter-rouge">npm install</code> dan sekali lagi jangan lupa di enter.</p>
 
-<p>Bagi Anda yang ingin membuka project tersebut di .NET Framework 4, ikuti langkah-langkah berikut:</p>
+<p><img src="http://wa-net.coding4ever.net/assets/images/8.png" alt="" /></p>
 
-<ol>
-  <li>
-    <p>Klik kanan project -&gt; properties</p>
+<p>Kemudian tunggu sampai proses instalasi module-module Node.js yang dibutuhkan selesai. Kalo untuk tampilan prosesnya lebih kurang seperti berikut, jadi mungkin di pc/laptop Anda akan mendapatkan tampilan yang berbeda.</p>
 
-    <p>Aktifkan tab Application, kemudian ganti Target framework menjadi .NET Framework 4</p>
+<p><img src="http://wa-net.coding4ever.net/assets/images/9.png" alt="" /></p>
 
-    <p><img src="http://wa-net.coding4ever.net/assets/images/6.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Hapus library <em>WebDriver</em> dan <em>WhatsAppNETAPI</em> yang ada di node <em>References</em>, kemudian ganti dengan library <em>WebDriver</em> dan <em>WhatsAppNETAPI</em> yang ada di folder <strong>libs\net40</strong></p>
+<p>Trus gimana caranya kalo mau ngetes instalasinya berhasil atau enggak? Caranya gampang Anda tinggal ketik perintah <code class="language-plaintext highlighter-rouge">npm start</code> kalo hasilnya kurang lebih seperti gambar di bawah ini, saya anggap instalasinya sudah berhasil :-).</p>
 
-    <p><img src="http://wa-net.coding4ever.net/assets/images/5.png" alt="" /></p>
-  </li>
-  <li>Build ulang project</li>
-  <li>Selesai</li>
-</ol>
+<p><img src="http://wa-net.coding4ever.net/assets/images/10.png" alt="" /></p>
+
+<p>Ayo kita tinggal lanjut ke langkah berikutnya :-)</p>
+
+<h3 id="3-mengclone-repository-contoh-penggunaan-library-whatsapp-net-client">3. Mengclone Repository Contoh Penggunaan Library WhatsApp NET Client</h3>
+
+<p>Langkah-langkah ini sebenarnya sama seperti sebelumnya, Anda tinggal pindah direktori atau mau pindah drive yang lain sama saja. Tapi untuk langkah-langkah di sini saya tetap menggunakan drive <code class="language-plaintext highlighter-rouge">C</code> untuk mengclone repositoy <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClient2">contoh penggunaan library WhatsApp NET Client</a>.</p>
+
+<p>Karena posisi kia sekarang ada di direktori <code class="language-plaintext highlighter-rouge">C:\WhatsAppNETAPINodeJs</code>, jadi kita harus kembali dulu ke root drive C dengan mengetikan perintah <code class="language-plaintext highlighter-rouge">cd\</code>, setelah itu ketik perintah berikut:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/WhatsAppNETClient/WhatsAppNETClient2.git
+</code></pre></div></div>
+
+<p><img src="http://wa-net.coding4ever.net/assets/images/11.png" alt="" /></p>
+
+<p>Ok, sampai di sini berarti langkah-langkah instalasi sudah selesai, kalo Anda buka windows explorer kemudian pindah ke drive <code class="language-plaintext highlighter-rouge">C</code>, maka akan mendapatkan dua direktor baru dengan nama <code class="language-plaintext highlighter-rouge">WhatsAppNETAPINodeJs</code> dan <code class="language-plaintext highlighter-rouge">WhatsAppNETClient2</code> yang merupakan hasil dari langkah-langkah sebelumnya.</p>
+
+<p><img src="http://wa-net.coding4ever.net/assets/images/12.png" alt="" /></p>
+
+<h2 id="membuka-project-contoh-penggunaan-library-whatsapp-net-client">Membuka Project Contoh Penggunaan Library WhatsApp NET Client</h2>
+
+<p>Caranya gampang, tinggal buka file <code class="language-plaintext highlighter-rouge">WhatsAppNETAPI.sln</code> yang ada di direktori <code class="language-plaintext highlighter-rouge">C:\WhatsAppNETClient2\src</code>.</p>
+
+<p><img src="http://wa-net.coding4ever.net/assets/images/13.png" alt="" /></p>
+
+<p>Contoh penggunaan library WhatsApp NET Client ini saya buat dalam dua bahasa yaitu bahasa C# dan VB.NET.</p>
+
+<p>Oh iya mumpung saya ingat hehe, project ini saya buat dengan menggunakan Visual Studio .NET 2015 Community, jadi minimal Anda harus sudah menginstall Visual Studio .NET 2015 Community atau versi yang lebih baru.</p>
+
+<p>Oke setelah membuka file <code class="language-plaintext highlighter-rouge">WhatsAppNETAPI.sln</code>, klik kanan solution <code class="language-plaintext highlighter-rouge">WhatsAppNETAPI</code> -&gt; <code class="language-plaintext highlighter-rouge">Rebuild Solution</code>. Langkah ini bertujuan untuk merestore semua <a href="https://www.nuget.org/packages/WhatsAppNETAPI">paket nuget</a> yang digunakan di dalam project ini.</p>
+
+<p><img src="http://wa-net.coding4ever.net/assets/images/14.png" alt="" /></p>
+
+<p>Setelah itu Anda bisa langsung menjalankan project dengan menekan tombol F5, kemudian mengeset lokasi direktori <code class="language-plaintext highlighter-rouge">WhatsAppNETAPINodeJs</code> yang merupakan hasil dari langkah-langkah sebelumnya, kemudian klik tombol Start.</p>
+
+<p><img src="http://wa-net.coding4ever.net/assets/images/15.png" alt="" /></p>
 
 <h2 id="melaporkan-bug-atau-error">Melaporkan Bug atau Error</h2>
 
-<p>Secara teknis dalam pengembangan sebuah aplikasi jelas tidak mungkin 100% bebas dari bug. Nah jika Anda menemukan bug atau error pada saat menggunakan library WhatsApp NET Client ini, silahkan Anda laporkan di halaman <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClient/issues">https://github.com/WhatsAppNETClient/WhatsAppNETClient/issues</a>.</p>
+<p>Secara teknis dalam pengembangan sebuah aplikasi jelas tidak mungkin 100% bebas dari bug. Nah jika Anda menemukan bug atau error pada saat menggunakan library WhatsApp NET Client ini, silahkan Anda laporkan di halaman <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClient2/issues">https://github.com/WhatsAppNETClient/WhatsAppNETClient2/issues</a>.</p>
 
-<p>Error yang sering terjadi adalah ketika versi google chrome Anda tidak kompatibel dengan versi ChromeDriver (WebDriver for Chrome), sehingga Anda harus mendownload ulang file <a href="https://chromedriver.chromium.org/downloads">chromedriver.exe</a> yang menyesuaikan dengan versi google chrome Anda, kemudian copykan ke folder <strong>bin\Debug</strong> atau <strong>bin\Release</strong>.</p>
+<h2 id="screenshot-project-contoh-penggunaan-library-whatsapp-net-client">Screenshot Project Contoh Penggunaan Library WhatsApp NET Client</h2>
 
-<h2 id="screenshot">Screenshot</h2>
+<p>Scan awal QRCode cukup sekali saja, untuk koneksi berikutnya sudah tidak diperlukan lagi karna library ini otomatis menyimpan session autentikasinya.</p>
 
-<p><img src="http://wa-net.coding4ever.net/assets/images/1.png" alt="" /></p>
+<p><img src="http://wa-net.coding4ever.net/assets/images/16.jpg" alt="" /></p>
 
-<p><img src="http://wa-net.coding4ever.net/assets/images/2.png" alt="" /></p>
+<p>Contoh subscribe pesan yang masuk, ada beberapa informasi yang bisa anda dapatkan seperti tanggal/jam, nomor/nama pengirim, pesan dan nama file jika pesan mengandung gambar, audio, video dan file dokumen lainnya.</p>
 
-<p><img src="http://wa-net.coding4ever.net/assets/images/3.png" alt="" /></p>
+<p><img src="http://wa-net.coding4ever.net/assets/images/17.png" alt="" /></p>
 
-<p><img src="http://wa-net.coding4ever.net/assets/images/4.png" alt="" /></p>
+<p>Contoh hasil dari fitur grab data contact, di fitur ini Anda bisa mendapatkan informasi nomor/nama kontak, short name dan verified Name.</p>
+
+<p><img src="http://wa-net.coding4ever.net/assets/images/18.jpg" alt="" /></p>
+
+<p>Contoh hasil dari fitur grab group dan anggotanya, di fitur ini Anda bisa mendapatkan informasi nama group dan membernya (nomor/nama kontak, short name dan verified Name).</p>
+
+<p><img src="http://wa-net.coding4ever.net/assets/images/19.jpg" alt="" /></p>
+
+<p>Contoh subscribe pesan yang keluar, di fitur ini Anda bisa mendapatkan status pengiriman pesan apakah berhasil atau gagal (nomor kontak belum terdaftar di WhatsApp).</p>
+
+<p><img src="http://wa-net.coding4ever.net/assets/images/20.png" alt="" /></p>
 
 <h2 id="info-rilis">Info Rilis</h2>
+
+<h3 id="v202-2021-07-25">v2.0.2 (2021-07-25)</h3>
+
+<ul>
+  <li>Mengganti library <a href="https://www.selenium.dev/documentation/en/webdriver/">Selenium Webdriver</a> dengan library <a href="https://github.com/pedroslopez/whatsapp-web.js/">whatsapp-web.js</a> sebagai engine utama untuk berkomunikasi dengan WhatsApp Web.</li>
+  <li>Full mode <em>siluman</em> (headless/no window)</li>
+  <li>Tidak kompatible dengan contoh project yang masih menggunakan library veri 1.3.x</li>
+  <li>Grab groups dan members untuk membaca data group berserta anggotanya sehingga hasilnya juga bisa Anda simpan ke database</li>
+  <li>Perbaikan fungsi mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen</li>
+  <li>Bisa menyimpan gambar, audio, video, dan semua jenis dokumen dari pesan yang masuk (bisa ditentukan sendiri lokasi penyimpanannya)</li>
+  <li>Bisa juga membaca pesan dengan tipe <code class="language-plaintext highlighter-rouge">contact</code> dan <code class="language-plaintext highlighter-rouge">location</code></li>
+  <li>Archive chat</li>
+  <li>Delete chat</li>
+</ul>
 
 <h3 id="v133-2021-02-02">v1.3.3 (2021-02-02)</h3>
 
