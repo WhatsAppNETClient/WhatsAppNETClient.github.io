@@ -58,21 +58,24 @@
 
 <ul>
   <li>Full mode <em>siluman</em> (headless/no window). Anda bisa mengatakan selamat tinggal kepada  chrome/firefox browser yang biasanya muncul untuk menjalankan WhatsApp Web.</li>
+  <li>Otomatis menyimpan sesi login (jadi scan qr code WAnya cukup sekali saja)</li>
   <li>Grab contacts untuk membaca kontak WA sehingga hasilnya bisa disimpan ke database</li>
-  <li>Grab groups dan members untuk membaca data group berserta anggotanya sehingga hasilnya juga bisa disimpan ke database</li>
-  <li>Mengirim pesan</li>
+  <li>Grab groups dan members untuk membaca data group beserta anggotanya sehingga hasilnya juga bisa disimpan ke database</li>
+  <li>Mengirim pesan personal atau group</li>
   <li>Mengirim banyak pesan (broadcast)</li>
   <li>Mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen</li>
   <li>Mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen via URL</li>
+  <li>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">location</code></li>
   <li>ReplyMessage (quoted message)</li>
   <li>Bisa menyimpan gambar, audio, video, semua jenis dokumen termasuk vcard dari pesan yang masuk (bisa ditentukan sendiri lokasi penyimpanannya)</li>
   <li>Bisa juga membaca pesan dengan tipe <code class="language-plaintext highlighter-rouge">vcard</code> dan <code class="language-plaintext highlighter-rouge">location</code></li>
+  <li>Bisa membaca pesan dari group dan mendapatkan informasi pengirimnya</li>
+  <li>Subscribe event ChangeState untuk memonitoring perubahan status koneksi</li>
+  <li>Subscribe pesan yang masuk, jadi enggak perlu nambah objek timer lagi untuk membaca pesan masuk</li>
+  <li>Subscribe pesan yang dikirim, dengan fitur ini kita bisa mengecek apakah pesan yang dikirim berhasil atau gagal</li>
   <li>Archive chat</li>
   <li>Delete chat</li>
-  <li>Listen/subscribe event ChangeState untuk memonitoring perubahan status koneksi</li>
-  <li>Listen/subscribe pesan yang masuk, jadi enggak perlu nambah objek timer lagi untuk membaca pesan masuk</li>
-  <li>Listen/subscribe pesan yang dikirim, dengan fitur ini kita bisa mengecek apakah pesan yang dikirim berhasil atau gagal</li>
-  <li>Otomatis menyimpan sesi login (jadi scan qr code WAnya cukup sekali saja)</li>
+  <li>Logout</li>
   <li>Bisa dengan mudah diintegrasikan dengan semua jenis database</li>
 </ul>
 
@@ -210,6 +213,29 @@
 <p><img src="http://wa-net.coding4ever.net/assets/images/20.png" alt="" /></p>
 
 <h2 id="info-rilis">Info Rilis</h2>
+
+<h3 id="v220-2021-08-12">v2.2.0 (2021-08-12)</h3>
+
+<ul>
+  <li>Fitur baru:
+    <ul>
+      <li>Penambahan fitur untuk mendapatkan informasi group tanpa member</li>
+      <li>Penambahan fitur untuk mengirim lokasi</li>
+      <li>Penambahan fitur logout</li>
+    </ul>
+  </li>
+  <li>Perbaikan bug:
+    <ul>
+      <li>Subscribe status pesan keluar yang dikirimkan ke group</li>
+    </ul>
+  </li>
+  <li>Improve:
+    <ul>
+      <li>Pembacaan pesan dari group, sudah bisa mendapatkan informasi pengirim pesan</li>
+      <li>Menambahkan informasi versi WhatsApp web dan Chrome pada saat inisialisasi</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="v210-2021-07-30">v2.1.0 (2021-07-30)</h3>
 
