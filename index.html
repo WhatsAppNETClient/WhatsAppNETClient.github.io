@@ -74,11 +74,16 @@
   <li>Bisa juga membaca pesan dengan tipe <code class="language-plaintext highlighter-rouge">vcard</code> dan <code class="language-plaintext highlighter-rouge">location</code></li>
   <li>Bisa membaca pesan dari group dan mendapatkan informasi pengirimnya</li>
   <li>Bisa mendapatkan nomor WA yang digunakan untuk scan QRCode</li>
-  <li>Subscribe event ChangeState untuk memonitoring perubahan status koneksi</li>
-  <li>Subscribe event GroupJoin untuk memonitoring user yang join ke group</li>
-  <li>Subscribe event GroupLeave untuk memonitoring user keluar dari group</li>
-  <li>Subscribe pesan yang masuk, jadi enggak perlu nambah objek timer lagi untuk membaca pesan masuk</li>
-  <li>Subscribe pesan yang dikirim, dengan fitur ini kita bisa mengecek apakah pesan yang dikirim berhasil atau gagal</li>
+  <li>Cek histori pesan berdasarkan nomor WA, jumlah pesan yang ditampilkan bisa diatur lewat parameter <code class="language-plaintext highlighter-rouge">limit</code></li>
+  <li>Subscribe event <code class="language-plaintext highlighter-rouge">ChangeState</code> untuk memonitoring perubahan status koneksi</li>
+  <li>Subscribe event <code class="language-plaintext highlighter-rouge">GroupJoin</code> untuk memonitoring user yang join ke group</li>
+  <li>Subscribe event <code class="language-plaintext highlighter-rouge">GroupLeave</code> untuk memonitoring user keluar dari group</li>
+  <li>Subscribe event <code class="language-plaintext highlighter-rouge">MessageAck</code> untuk memonitoring status pesan yang dikirim (pending, sudah diterima/baca, dll)</li>
+  <li>Subscribe event <code class="language-plaintext highlighter-rouge">ChangeBattery</code> untuk memonitoring status battery. Status battery akan diupdate secara berkala, dan jika ingin mendapatkan status battery terkini tinggal panggil method <code class="language-plaintext highlighter-rouge">GetBatteryStatus</code></li>
+  <li>Subscribe event <code class="language-plaintext highlighter-rouge">ReceiveMessage</code>, untuk memonitoring pesan masuk</li>
+  <li>Subscribe event <code class="language-plaintext highlighter-rouge">ReceiveMessageStatus</code> untuk memonitoring status pesan yang dikirim berhasil atau gagal.</li>
+  <li>Subscribe event <code class="language-plaintext highlighter-rouge">MessageAck</code> untuk memonitoring status pesan setelah di kirim (pending, sudah diterima/baca, dll)</li>
+  <li>Tersedia fitur <code class="language-plaintext highlighter-rouge">REST API</code>, sehingga semua fitur library WhatsApp NET Client juga bisa diakses via <code class="language-plaintext highlighter-rouge">REST API</code> baik secara local maupun remote. Untuk contoh penggunaannya bisa Anda lihat di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi">https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi</a></li>
   <li>Archive chat (semua atau berdasarkan nomor WA)</li>
   <li>Delete chat (semua atau berdasarkan nomor WA)</li>
   <li>Pengesetan status</li>
@@ -227,13 +232,26 @@
 
 <h1 id="info-rilis">Info Rilis</h1>
 
+<h3 id="v260-2022-01-21">v2.6.0 (2022-01-21)</h3>
+
+<ul>
+  <li>Fitur baru:
+    <ul>
+      <li>Implementasi event <code class="language-plaintext highlighter-rouge">message_ack</code> untuk memonitoring status pesan setelah di kirim (pending, sudah diterima/baca, dll)</li>
+      <li>Implementasi event <code class="language-plaintext highlighter-rouge">change_battery</code> untuk memonitoring status battery. Status battery akan diupdate secara berkala, dan jika ingin mendapatkan status battery terkini tinggal panggil method <code class="language-plaintext highlighter-rouge">GetBatteryStatus</code>.</li>
+      <li>Penambahan fitur untuk mendapatkan histori pesan berdasarkan nomor WA, jumlah pesan yang ditampilkan bisa diatur lewat parameter <code class="language-plaintext highlighter-rouge">limit</code>.</li>
+      <li>Penambahan fitur untuk mengaktifkan layanan <code class="language-plaintext highlighter-rouge">REST API</code>, sehingga semua fitur library WhatsApp NET Client juga bisa diakses via <code class="language-plaintext highlighter-rouge">REST API</code> baik secara local maupun remote. Untuk contoh penggunaannya bisa Anda lihat di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi">https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi</a></li>
+    </ul>
+  </li>
+</ul>
+
 <h3 id="v250-2022-01-13">v2.5.0 (2022-01-13)</h3>
 
 <ul>
   <li>Fitur baru:
     <ul>
-      <li>Implementasi event group_join untuk memonitoring user yang join ke group</li>
-      <li>Implementasi event group_leave untuk memonitoring user yang keluar dari group</li>
+      <li>Implementasi event <code class="language-plaintext highlighter-rouge">group_join</code> untuk memonitoring user yang join ke group</li>
+      <li>Implementasi event <code class="language-plaintext highlighter-rouge">group_leave</code> untuk memonitoring user yang keluar dari group</li>
       <li>Penambahan property <code class="language-plaintext highlighter-rouge">GetCurrentNumber</code> untuk mendapatkan nomor WA yang digunakan untuk scan QRCode</li>
       <li>Penambahan fitur untuk mengeset status</li>
       <li>Penambahan fitur untuk mengarsipkan/menghapus chat berdasarkan nomor WA</li>
@@ -258,7 +276,7 @@
 <ul>
   <li>Fitur baru:
     <ul>
-      <li>Penambahan fitur <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount">multi account WA</a></li>
+      <li>Penambahan fitur <code class="language-plaintext highlighter-rouge">multi account WA</code>. Contoh penggunaannya bisa Anda lihat di<a href="https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount">sini</a></li>
     </ul>
 
     <p>Di versi <a href="https://www.nuget.org/packages/WhatsAppNETAPI/2.3.0">2.3.0</a> ini terjadi penambahan parameter <code class="language-plaintext highlighter-rouge">sessionId</code> di semua event handler yang ada, sehingga harus Anda sesuaikan secara manual.</p>
