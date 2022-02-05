@@ -83,7 +83,8 @@
   <li>Subscribe event <code class="language-plaintext highlighter-rouge">ReceiveMessage</code>, untuk memonitoring pesan masuk</li>
   <li>Subscribe event <code class="language-plaintext highlighter-rouge">ReceiveMessageStatus</code> untuk memonitoring status pesan yang dikirim berhasil atau gagal.</li>
   <li>Subscribe event <code class="language-plaintext highlighter-rouge">MessageAck</code> untuk memonitoring status pesan setelah di kirim (pending, sudah diterima/baca, dll)</li>
-  <li>Tersedia fitur <code class="language-plaintext highlighter-rouge">REST API</code>, sehingga semua fitur library WhatsApp NET Client juga bisa diakses via <code class="language-plaintext highlighter-rouge">REST API</code> baik secara local maupun remote. Untuk contoh penggunaannya bisa Anda lihat di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi">https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi</a></li>
+  <li>Tersedia fitur untuk verifikasi valid atau tidaknya nomor WA. Fitur ini cocok untuk mengirimkan broadcast ke nomor-nomor yang belum ada di daftar kontak atau nomor-nomor hasil generate.</li>
+  <li>Tersedia juga fitur <code class="language-plaintext highlighter-rouge">REST API</code>, sehingga semua fitur library WhatsApp NET Client juga bisa diakses via <code class="language-plaintext highlighter-rouge">REST API</code> baik secara local maupun remote. Untuk contoh penggunaannya bisa Anda lihat di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi">https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi</a></li>
   <li>Archive chat (semua atau berdasarkan nomor WA)</li>
   <li>Delete chat (semua atau berdasarkan nomor WA)</li>
   <li>Pengesetan status</li>
@@ -242,7 +243,7 @@
 <ul>
   <li>Fitur baru:
     <ul>
-      <li>Penambahan fitur untuk memverifikasi valid atau tidaknya nomor WA. Fitur ini cocok untuk mengirimkan broadcast ke nomor-nomor yang belum ada di daftar kontak atau nomor-nomor hasil generate.</li>
+      <li>Penambahan fitur untuk verifikasi valid atau tidaknya nomor WA. Fitur ini cocok untuk mengirimkan broadcast ke nomor-nomor yang belum ada di daftar kontak atau nomor-nomor hasil generate.</li>
       <li>Penambahan dukungan untuk <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">WA Multi-device</a></li>
       <li>Penambahan property <code class="language-plaintext highlighter-rouge">IsMultiDevice</code> untuk mendeteksi apakah WA yang digunakan adalah WA Multi-device atau bukan.</li>
     </ul>
