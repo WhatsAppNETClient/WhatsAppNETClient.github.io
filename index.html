@@ -60,6 +60,7 @@
   <li>Full mode <em>siluman</em> (headless/no window). Anda bisa mengatakan selamat tinggal kepada  chrome/firefox browser yang biasanya muncul untuk menjalankan WhatsApp Web.</li>
   <li>Otomatis menyimpan sesi login (jadi scan qr code WAnya cukup sekali saja)</li>
   <li>Mendukung penggunaan <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount">multi account WA</a>, untuk contohnya bisa Anda lihat di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount">https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount</a></li>
+  <li>Mendukung penggunaan <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">WA Multi-device</a></li>
   <li>Grab contacts untuk membaca kontak WA sehingga hasilnya bisa disimpan ke database</li>
   <li>Grab groups dan members untuk membaca data group beserta anggotanya sehingga hasilnya juga bisa disimpan ke database</li>
   <li>Mengirim pesan personal atau group</li>
@@ -111,6 +112,8 @@
 
 <p><a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs">WhatsApp NET API NodeJs</a> adalah program kecil yang saya tulis menggunakan bahasa pemrograman java script yang di dalamnya terdapat module untuk mengakses library <a href="https://github.com/pedroslopez/whatsapp-web.js/">Whatsapp-web.js</a> dan <a href="https://www.npmjs.com/package/node-signalr">node-signalr</a>.</p>
 
+<p>Saat ini sudah tersedia juga <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">WhatsApp NET API NodeJs</a> untuk <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">Multi-device</a>.</p>
+
 <ul>
   <li><a href="https://github.com/pedroslopez/whatsapp-web.js/">Whatsapp-web.js</a> berfungsi untuk berkomunikasi dengan WhatsApp Web.</li>
   <li><a href="https://www.npmjs.com/package/node-signalr">Node-signalr</a> berfungsi sebagai signalR client yang bertugas untuk berkomunikasi dengan signalR server yang saya tanam di dalam library WhatsApp NET Client.</li>
@@ -124,6 +127,9 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs.git
 </code></pre></div></div>
+
+<p>Untuk Multi-device, Anda tinggal arahkan url repositorynya ke <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA.git">https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA.git</a></p>
+
 <p>Jangan lupa menekan enter ya hehehe, setelah itu lanjutkan dengan mengetikan perintah <code class="language-plaintext highlighter-rouge">cd WhatsAppNETAPINodeJs</code>, kemudian ketikan perintah terakhir yaitu <code class="language-plaintext highlighter-rouge">npm install</code> dan sekali lagi jangan lupa di enter.</p>
 
 <p><img src="http://wa-net.coding4ever.net/assets/images/8.png" alt="" /></p>
@@ -230,6 +236,18 @@
 <p><img src="http://wa-net.coding4ever.net/assets/images/20.png" alt="" /></p>
 
 <h1 id="info-rilis">Info Rilis</h1>
+
+<h3 id="v270-2022-02-05">v2.7.0 (2022-02-05)</h3>
+
+<ul>
+  <li>Fitur baru:
+    <ul>
+      <li>Penambahan fitur untuk memverifikasi valid atau tidaknya nomor WA. Fitur ini cocok untuk mengirimkan broadcast ke nomor-nomor yang belum ada di daftar kontak atau nomor-nomor hasil generate.</li>
+      <li>Penambahan dukungan untuk <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">WA Multi-device</a></li>
+      <li>Penambahan property <code class="language-plaintext highlighter-rouge">IsMultiDevice</code> untuk mendeteksi apakah WA yang digunakan adalah WA Multi-device atau bukan.</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="v260-2022-01-21">v2.6.0 (2022-01-21)</h3>
 
