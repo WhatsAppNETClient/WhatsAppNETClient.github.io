@@ -69,8 +69,10 @@
   <li>Mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen via URL</li>
   <li>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">location</code></li>
   <li>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">button</code></li>
+  <li>Bisa juga menambahkan gambar di pesan dengan tipe <code class="language-plaintext highlighter-rouge">button</code></li>
   <li>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">list</code> (tidak support untuk WA bisnis)</li>
   <li>ReplyMessage (quoted message)</li>
+  <li>Mention user</li>
   <li>Bisa menyimpan gambar, audio, video, semua jenis dokumen termasuk vcard dari pesan yang masuk (bisa ditentukan sendiri lokasi penyimpanannya)</li>
   <li>Bisa juga membaca pesan dengan tipe <code class="language-plaintext highlighter-rouge">vcard</code> dan <code class="language-plaintext highlighter-rouge">location</code></li>
   <li>Bisa membaca pesan dari group dan mendapatkan informasi pengirimnya</li>
@@ -237,6 +239,23 @@
 <p><img src="http://wa-net.coding4ever.net/assets/images/20.png" alt="" /></p>
 
 <h1 id="info-rilis">Info Rilis</h1>
+
+<h3 id="v280-2022-02-21">v2.8.0 (2022-02-21)</h3>
+
+<ul>
+  <li>Fitur baru:
+    <ul>
+      <li>Penambahan fitur mention</li>
+    </ul>
+  </li>
+  <li>Improve:
+    <ul>
+      <li>Penambahan property <code class="language-plaintext highlighter-rouge">id</code> utk pesan dengan tipe button dan list</li>
+      <li>Penambahan property <code class="language-plaintext highlighter-rouge">selectedButtonId</code> dan <code class="language-plaintext highlighter-rouge">selectedRowId</code> di class <code class="language-plaintext highlighter-rouge">Message</code> ketika menerima pesan masuk dengan tipe <code class="language-plaintext highlighter-rouge">Button</code> atau <code class="language-plaintext highlighter-rouge">List</code>. Dua property ini digunakan untuk mendapatkan id button/list yang dipilih</li>
+      <li>Bisa menambahkan gambar untuk pesan dengan tipe <code class="language-plaintext highlighter-rouge">Button</code></li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="v270-2022-02-05">v2.7.0 (2022-02-05)</h3>
 
