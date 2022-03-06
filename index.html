@@ -44,7 +44,7 @@
 
 <p><a href="http://wa-net.coding4ever.net">WhatsApp NET Client</a> adalah library <strong>gratis</strong> untuk .NET Developer yang digunakan untuk mengembangkan aplikasi WhatsApp klien berbasis desktop. Library ini dikembangkan di atas teknologi .NET dengan menggunakan bahasa pemrograman C#, sehingga bisa juga digunakan untuk semua bahasa pemrograman .NET selain C# seperti VB.NET, F#, C++ dan bahasa .NET lainnya.</p>
 
-<p>Dalam pengembangannya WhatsApp NET Client menggunakan <a href="https://github.com/pedroslopez/whatsapp-web.js/">whatsapp-web.js</a> sebagai engine untuk berkomunikasi dengan WhatsApp Web.</p>
+<p>Dalam pengembangannya WhatsApp NET Client menggunakan <a href="https://github.com/pedroslopez/whatsapp-web.js/">whatsapp-web.js</a> sebagai engine untuk berkomunikasi dengan WhatsApp Web, sehingga WhatsApp NET Client bisa berkomunikasi dengan WhatsApp standar dan multi device.</p>
 
 <p>Jadi kesimpulannya dengan menggunakan library ini Anda bisa dengan mudah membuat aplikasi-aplikasi yang membutuhkan komunikasi dengan aplikasi WhatsApp Web, seperti:</p>
 
@@ -56,43 +56,187 @@
 
 <h1 id="fitur">Fitur</h1>
 
-<ul>
-  <li>Full mode <em>siluman</em> (headless/no window). Anda bisa mengatakan selamat tinggal kepada  chrome/firefox browser yang biasanya muncul untuk menjalankan WhatsApp Web.</li>
-  <li>Otomatis menyimpan sesi login (jadi scan qr code WAnya cukup sekali saja)</li>
-  <li>Mendukung penggunaan <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount">multi account WA</a>, untuk contohnya bisa Anda lihat di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount">https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount</a></li>
-  <li>Mendukung penggunaan <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">WA Multi-device</a></li>
-  <li>Grab contacts untuk membaca kontak WA sehingga hasilnya bisa disimpan ke database</li>
-  <li>Grab groups dan members untuk membaca data group beserta anggotanya sehingga hasilnya juga bisa disimpan ke database</li>
-  <li>Mengirim pesan personal atau group</li>
-  <li>Mengirim banyak pesan (broadcast)</li>
-  <li>Mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen</li>
-  <li>Mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen via URL</li>
-  <li>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">location</code></li>
-  <li>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">button</code></li>
-  <li>Bisa juga menambahkan gambar di pesan dengan tipe <code class="language-plaintext highlighter-rouge">button</code></li>
-  <li>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">list</code> (tidak support untuk WA bisnis)</li>
-  <li>ReplyMessage (quoted message)</li>
-  <li>Mention user</li>
-  <li>Bisa menyimpan gambar, audio, video, semua jenis dokumen termasuk vcard dari pesan yang masuk (bisa ditentukan sendiri lokasi penyimpanannya)</li>
-  <li>Bisa juga membaca pesan dengan tipe <code class="language-plaintext highlighter-rouge">vcard</code> dan <code class="language-plaintext highlighter-rouge">location</code></li>
-  <li>Bisa membaca pesan dari group dan mendapatkan informasi pengirimnya</li>
-  <li>Bisa mendapatkan nomor WA yang digunakan untuk scan QRCode</li>
-  <li>Cek histori pesan berdasarkan nomor WA, jumlah pesan yang ditampilkan bisa diatur lewat parameter <code class="language-plaintext highlighter-rouge">limit</code></li>
-  <li>Subscribe event <code class="language-plaintext highlighter-rouge">ChangeState</code> untuk memonitoring perubahan status koneksi</li>
-  <li>Subscribe event <code class="language-plaintext highlighter-rouge">GroupJoin</code> untuk memonitoring user yang join ke group</li>
-  <li>Subscribe event <code class="language-plaintext highlighter-rouge">GroupLeave</code> untuk memonitoring user keluar dari group</li>
-  <li>Subscribe event <code class="language-plaintext highlighter-rouge">ChangeBattery</code> untuk memonitoring status battery. Status battery akan diupdate secara berkala, dan jika ingin mendapatkan status battery terkini tinggal panggil method <code class="language-plaintext highlighter-rouge">GetBatteryStatus</code></li>
-  <li>Subscribe event <code class="language-plaintext highlighter-rouge">ReceiveMessage</code>, untuk memonitoring pesan masuk</li>
-  <li>Subscribe event <code class="language-plaintext highlighter-rouge">ReceiveMessageStatus</code> untuk memonitoring status pesan yang dikirim berhasil atau gagal.</li>
-  <li>Subscribe event <code class="language-plaintext highlighter-rouge">MessageAck</code> untuk memonitoring status pesan setelah di kirim (pending, sudah diterima/baca, dll)</li>
-  <li>Tersedia fitur untuk verifikasi valid atau tidaknya nomor WA. Fitur ini cocok untuk mengirimkan broadcast ke nomor-nomor yang belum ada di daftar kontak atau nomor-nomor hasil generate.</li>
-  <li>Tersedia juga fitur <code class="language-plaintext highlighter-rouge">REST API</code>, sehingga semua fitur library WhatsApp NET Client juga bisa diakses via <code class="language-plaintext highlighter-rouge">REST API</code> baik secara local maupun remote. Untuk contoh penggunaannya bisa Anda lihat di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi">https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi</a></li>
-  <li>Archive chat (semua atau berdasarkan nomor WA)</li>
-  <li>Delete chat (semua atau berdasarkan nomor WA)</li>
-  <li>Pengesetan status</li>
-  <li>Logout</li>
-  <li>Bisa dengan mudah diintegrasikan dengan semua jenis database</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th style="text-align: center">WA Standard</th>
+      <th style="text-align: center">Multi Device</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Headless/no window</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Otomatis menyimpan sesi login (jadi scan qr code WAnya cukup sekali saja)</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Mendukung penggunaan <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount">multi account WA</a>, untuk contohnya bisa Anda lihat di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount">https://github.com/WhatsAppNETClient/WhatsAppNETClientMultiAccount</a></td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Grab contacts untuk membaca kontak WA sehingga hasilnya bisa disimpan ke database</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Grab groups dan members untuk membaca data group beserta anggotanya sehingga hasilnya juga bisa disimpan ke database</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Mengirim pesan personal atau group</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Mengirim banyak pesan (broadcast)</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Mengirim pesan dengan gambar, audio, video, dan semua jenis dokumen via URL</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">location</code></td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">button</code></td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td>Bisa juga menambahkan gambar di pesan dengan tipe <code class="language-plaintext highlighter-rouge">button</code></td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td>Mengirim pesan dengan tipe <code class="language-plaintext highlighter-rouge">list</code> (tidak support untuk WA bisnis)</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>ReplyMessage (quoted message)</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Mention user</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Bisa menyimpan gambar, audio, video, semua jenis dokumen termasuk vcard dari pesan yang masuk</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Bisa juga membaca pesan dengan tipe <code class="language-plaintext highlighter-rouge">vcard</code> dan <code class="language-plaintext highlighter-rouge">location</code></td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Bisa membaca pesan dari group dan mendapatkan informasi pengirimnya</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Bisa mendapatkan nomor WA yang digunakan untuk scan QRCode</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Cek histori pesan berdasarkan nomor WA, jumlah pesan yang ditampilkan bisa diatur lewat parameter <code class="language-plaintext highlighter-rouge">limit</code></td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Subscribe event <code class="language-plaintext highlighter-rouge">ChangeState</code> untuk memonitoring perubahan status koneksi</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Subscribe event <code class="language-plaintext highlighter-rouge">GroupJoin</code> untuk memonitoring user yang join ke group</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Subscribe event <code class="language-plaintext highlighter-rouge">GroupLeave</code> untuk memonitoring user keluar dari group</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Subscribe event <code class="language-plaintext highlighter-rouge">ChangeBattery</code> untuk memonitoring status battery. Status battery akan diupdate secara berkala, dan jika ingin mendapatkan status battery terkini tinggal panggil method <code class="language-plaintext highlighter-rouge">GetBatteryStatus</code></td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td>Subscribe event <code class="language-plaintext highlighter-rouge">ReceiveMessage</code>, untuk memonitoring pesan masuk</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Subscribe event <code class="language-plaintext highlighter-rouge">ReceiveMessageStatus</code> untuk memonitoring status pesan yang dikirim berhasil atau gagal.</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Subscribe event <code class="language-plaintext highlighter-rouge">MessageAck</code> untuk memonitoring status pesan setelah di kirim (pending, sudah diterima/baca, dll)</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Tersedia fitur untuk verifikasi valid atau tidaknya nomor WA. Fitur ini cocok untuk mengirimkan broadcast ke nomor-nomor yang belum ada di daftar kontak atau nomor-nomor hasil generate.</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Tersedia juga fitur <code class="language-plaintext highlighter-rouge">REST API</code>, sehingga semua fitur library WhatsApp NET Client juga bisa diakses via <code class="language-plaintext highlighter-rouge">REST API</code> baik secara local maupun remote. Untuk contoh penggunaannya bisa Anda lihat di <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi">https://github.com/WhatsAppNETClient/WhatsAppNETAPIRestApi</a></td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Archive chat (semua atau berdasarkan nomor WA)</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Delete chat (semua atau berdasarkan nomor WA)</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Pengesetan status</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">❌</td>
+    </tr>
+    <tr>
+      <td>Logout</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>Bisa dengan mudah diintegrasikan dengan semua jenis database</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+  </tbody>
+</table>
 
 <h1 id="persyaratan-sistem"><a href="#persyaratan-sistem">Persyaratan Sistem</a></h1>
 
@@ -115,8 +259,6 @@
 
 <p><a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs">WhatsApp NET API NodeJs</a> adalah program kecil yang saya tulis menggunakan bahasa pemrograman java script yang di dalamnya terdapat module untuk mengakses library <a href="https://github.com/pedroslopez/whatsapp-web.js/">Whatsapp-web.js</a> dan <a href="https://www.npmjs.com/package/node-signalr">node-signalr</a>.</p>
 
-<p>Saat ini sudah tersedia juga <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">WhatsApp NET API NodeJs</a> untuk <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">Multi-device</a>.</p>
-
 <ul>
   <li><a href="https://github.com/pedroslopez/whatsapp-web.js/">Whatsapp-web.js</a> berfungsi untuk berkomunikasi dengan WhatsApp Web.</li>
   <li><a href="https://www.npmjs.com/package/node-signalr">Node-signalr</a> berfungsi sebagai signalR client yang bertugas untuk berkomunikasi dengan signalR server yang saya tanam di dalam library WhatsApp NET Client.</li>
@@ -130,8 +272,6 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs.git
 </code></pre></div></div>
-
-<p>Untuk Multi-device, Anda tinggal arahkan url repositorynya ke <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA.git">https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA.git</a></p>
 
 <p>Jangan lupa menekan enter ya hehehe, setelah itu lanjutkan dengan mengetikan perintah <code class="language-plaintext highlighter-rouge">cd WhatsAppNETAPINodeJs</code>, kemudian ketikan perintah terakhir yaitu <code class="language-plaintext highlighter-rouge">npm install</code> dan sekali lagi jangan lupa di enter.</p>
 
@@ -240,6 +380,26 @@
 
 <h1 id="info-rilis">Info Rilis</h1>
 
+<h3 id="v281-2022-03-06">v2.8.1 (2022-03-06)</h3>
+
+<ul>
+  <li>Fitur baru:
+    <ul>
+      <li>Penambahan property <code class="language-plaintext highlighter-rouge">Headless</code> untuk keperluan development. Jadi Anda bisa mengatur sendiri apakah ingin menampilkan atau menyembunyikan chrome browser.</li>
+    </ul>
+  </li>
+  <li>Improve:
+    <ul>
+      <li>Perubahan hak akses property <code class="language-plaintext highlighter-rouge">IsMultiDevice</code> dari read only menjadi read/write. Jadi untuk mengaktifkan fitur multi device tinggal set property <code class="language-plaintext highlighter-rouge">IsMultiDevice</code> menjadi true.</li>
+    </ul>
+  </li>
+  <li>Deprecated:
+    <ul>
+      <li>Repository <del><a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">WhatsAppNETAPINodeJsMultideviceBETA</a></del> sudah tidak digunakan, dukungan multi device sudah ditambahkan ke repo <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs">WhatsAppNETAPINodeJs</a>.</li>
+    </ul>
+  </li>
+</ul>
+
 <h3 id="v280-2022-02-21">v2.8.0 (2022-02-21)</h3>
 
 <ul>
@@ -263,7 +423,7 @@
   <li>Fitur baru:
     <ul>
       <li>Penambahan fitur untuk verifikasi valid atau tidaknya nomor WA. Fitur ini cocok untuk mengirimkan broadcast ke nomor-nomor yang belum ada di daftar kontak atau nomor-nomor hasil generate.</li>
-      <li>Penambahan dukungan untuk <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJsMultideviceBETA">WA Multi-device</a></li>
+      <li>Penambahan dukungan untuk WA Multi-device</li>
       <li>Penambahan property <code class="language-plaintext highlighter-rouge">IsMultiDevice</code> untuk mendeteksi apakah WA yang digunakan adalah WA Multi-device atau bukan.</li>
     </ul>
   </li>
