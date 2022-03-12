@@ -380,6 +380,13 @@
 
 <h1 id="info-rilis">Info Rilis</h1>
 
+<h3 id="v290-2022-03-12">v2.9.0 (2022-03-12)</h3>
+
+<ul>
+  <li>Penambahan event <code class="language-plaintext highlighter-rouge">Monitoring Log</code> untuk memonitoring log (INFO/ERROR) yang dikirim dari <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs">WhatsAppNETAPINodeJs</a>. Salah satu manfaat dari event ini bisa digunakan untuk mendeteksi crash yang terjadi pada chrome browser.</li>
+  <li>Penambahan method <code class="language-plaintext highlighter-rouge">GetCurrentState</code>. Walaupun sudah ada event <code class="language-plaintext highlighter-rouge">ChangeState</code> untuk memonitoring perubahan status koneksi, hanya saja event ini tidak diupdate secara realtime sehingga untuk mendapatkan status koneksi terkini tinggal panggil method <code class="language-plaintext highlighter-rouge">GetCurrentState</code>.</li>
+</ul>
+
 <h3 id="v281-2022-03-06">v2.8.1 (2022-03-06)</h3>
 
 <ul>
