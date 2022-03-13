@@ -146,7 +146,7 @@
       <td style="text-align: center">✅</td>
     </tr>
     <tr>
-      <td>Bisa juga membaca pesan dengan tipe <code class="language-plaintext highlighter-rouge">vcard</code> dan <code class="language-plaintext highlighter-rouge">location</code></td>
+      <td>Bisa juga membaca pesan dengan tipe <code class="language-plaintext highlighter-rouge">vcard</code>, <code class="language-plaintext highlighter-rouge">location</code> dan <code class="language-plaintext highlighter-rouge">call</code></td>
       <td style="text-align: center">✅</td>
       <td style="text-align: center">✅</td>
     </tr>
@@ -390,6 +390,7 @@
 <ul>
   <li>Penambahan event <code class="language-plaintext highlighter-rouge">Monitoring Log</code> untuk memonitoring log (INFO/ERROR) yang dikirim dari <a href="https://github.com/WhatsAppNETClient/WhatsAppNETAPINodeJs">WhatsAppNETAPINodeJs</a>. Salah satu manfaat dari event ini bisa digunakan untuk mendeteksi crash yang terjadi pada chrome browser.</li>
   <li>Penambahan method <code class="language-plaintext highlighter-rouge">GetCurrentState</code>. Walaupun sudah ada event <code class="language-plaintext highlighter-rouge">ChangeState</code> untuk memonitoring perubahan status koneksi, hanya saja event ini tidak diupdate secara realtime sehingga untuk mendapatkan status koneksi terkini tinggal panggil method <code class="language-plaintext highlighter-rouge">GetCurrentState</code>.</li>
+  <li>Penambahan dukungan untuk menghandle <a href="https://github.com/WhatsAppNETClient/WhatsAppNETClient2/blob/52e6df5d2e8dea79b50760ca65e96313558284f8/src/DemoWhatsAppNETAPICSharp/FrmMain.cs#L749">telepon masuk</a> (berupa notifikasi pesan masuk).</li>
 </ul>
 
 <h3 id="v281-2022-03-06">v2.8.1 (2022-03-06)</h3>
