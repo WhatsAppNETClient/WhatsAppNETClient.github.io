@@ -1,0 +1,7 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+/index.backup-update.html
+/Generator_Table_Fitur_WA.NET.tgn
